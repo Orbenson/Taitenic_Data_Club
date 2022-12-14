@@ -1,15 +1,17 @@
-# SQL Exercise - Titanic Data
+# SQL Exercise - Titanic Data- Data club 
 
-For this exercise, we're going to take a look at the Titanic manifest using SQL. We'll be exploring this data to see what we can learn regarding the survival rates of different groups of people.
+For this Challenge , we're going to take a look at the Titanic manifest using SQL. We'll be exploring this data to see what we can learn regarding the survival rates of different groups of people.
 
 **Be careful to do these steps in order!** Doing these steps out of order (especially after creating columns or deleting observations) may lead to unintentional results.
 
-## Step 0: Prework
+## Step 0: Prework to do before starting 
 1. Go to [https://sqliteonline.com/](https://sqliteonline.com/)
 2. Once you're on sqliteonline, click "File" in the upper-left hand corner, then "Open DB." Navigate to where you've cloned this repo so that you can open the `titanic.db` sqlite database.
 3. Write SQL commands to tackle the problems below, testing them on the table you just uploaded to [https://sqliteonline.com/](https://sqliteonline.com/). Once they work, copy them and any other answers into a text file (with clearly labeled numbers!) that you create in this repository using a text editor of your choice.
+you can also open Colab notebook and try to import from there
+3. Write SQL commands to tackle the problems below, testing them on the table you just uploaded to [https://sqliteonline.com/](https://sqliteonline.com/). Once they work, copy them and any other answers into a text file (with clearly labeled numbers!) that you create in this repository using a text editor of your choice.
 
-## Step 1: Cleaning the data
+## Step 1: Cleaning the data- importent for data users.
 1. What is the likeliest primary key?
 2. Delete all rows where `Embarked` is empty, as we'll assume these individuals did not get on the ship.
 3. Fill all empty cabins with **¯\\_(ツ)_/¯**
@@ -33,10 +35,11 @@ For this section, I have provided some assistance with 1 and 2 to help you creat
 SELECT COUNT(*) FROM titanic;
 ```
 
-2-1. What was the survival rate overall?
+2-1. What was the survival rate of women and children (under 18) overall?
 
 ```sql
 SELECT SUM(Survived) / 889 FROM titanic;
+--case in needed 
 ```
 
 2-2. Hmm. The answer to 2-1 seems weird. Try this:
@@ -45,16 +48,16 @@ SELECT SUM(Survived) / 889 FROM titanic;
 SELECT SUM(Survived) / 889.0 FROM titanic;
 ```
 
-2-3. What's the difference between dividing by 889 and dividing by 889.0? What do you think is causing this? (Hint: Users of Python 2 might be particularly aware of this issue.)
+2-3. What's the difference between dividing by 889 and dividing by 889.0? What do you think is causing this? (Hint: Users of Python 3.8 might be particularly aware of this issue.)
 
 2-4. Run this command and compare your results to those you got from 2-2.
 ```sql
 SELECT AVG(Survived) FROM titanic;
 ```
 
-3-1. What was the survival rate of men?
+3-1. What was the survival rate of men in the Pclass 1?
 
-3-2. What was the survival rate of women?
+3-2. What was the survival rate of women in Pclass 1?
 
 4. What was the survival rate for each `Pclass`?
 
