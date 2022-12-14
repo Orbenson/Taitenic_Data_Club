@@ -77,9 +77,9 @@ SELECT AVG(Survived) FROM titanic;
 
 12. What is the survival rate for children (under 12) in each `Pclass`?
 
-13. Did the #captain of the ship survive? Is he on the list?
+13. Did the **Captain** of the ship survive? Is he on the list?
 
-14. Of all the people that died, who had the most expensive ticket? How much did it cost?
+14. Of all the people that died, who had the most **expensive** ticket? How much did it cost?
   - Hint: You may want to look into the `ORDER BY` or `MAX()`
 
 15. Does having family on the boat help or hurt your chances of survival?
